@@ -1,5 +1,38 @@
 <template>
 <div id="app">
+
+<!-- NAVBAR-->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-primary">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pages/shop.html">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pages/cart.html">Cart</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pages/about.html">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- END NAVBAR-->
+
+  <!-- LOGO CONTAINER -->
+  <div id="logo" class="logo-container">
+    <img src="images/logo.jpeg" width="300" style="text-align: center;">
+  </div>
+  <!-- END LOGO CONTAINER -->
+
+
+
   <div id="menu">
     <div id="brand">
       <router-link to="/">
@@ -22,6 +55,8 @@
     </div>
   </div>
   <router-view />
+
+
 </div>
 </template>
 
