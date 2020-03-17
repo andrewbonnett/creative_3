@@ -22,12 +22,12 @@ const routes = [
     path: '/cart',
     name: 'Cart',
     component: Cart
-  }
+  },
   {
     path: '/about',
     name: 'About',
     component: About
-  }
+  },
 ]
 
 const router = new VueRouter({
