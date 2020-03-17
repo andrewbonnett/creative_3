@@ -20,7 +20,7 @@
         </li>
         <li class="nav-item">
           <router-link to="/cart">
-            <a class="nav-link">Cart</a>
+            <a class="nav-link">Cart ({{numCartItems}})</a>
           </router-link>
         </li>
         <li class="nav-item">
@@ -38,37 +38,12 @@
     <img src="images/logo.jpeg" width="300" style="text-align: center;">
   </div>
   <!-- END LOGO CONTAINER -->
-
+  <router-view />
   <!-- FOOTER-->
   <div class="footer">
       <span>Drew Bonnett, Christian Lewis 2020. Please visit <a href="https://github.com/andrewbonnett/creative_3">Github</a> for the files associated with this site.</span>
   </div>
   <!-- END FOOTER-->
-
-<!-- JUNK
-  <div id="menu">
-    <div id="brand">
-      <router-link to="/">
-        <img src="/images/logo.jpeg">
-      </router-link>
-    </div>
-    <div id="side">
-      <router-link to="/browse">
-        <div class="menu-item browse">
-          <img src="/images/globe.png">
-          <p>Browse</p>
-        </div>
-      </router-link>
-      <router-link to="/cart">
-        <div class="menu-item">
-          <img src="/images/love.png">
-          <p> {{ numCartItems }} items</p>
-        </div>
-      </router-link>
-    </div>
-  </div>
-  <router-view />
--->
 
 </div>
 
@@ -95,7 +70,7 @@ export default {
     font-size: 15px;
     font-family: Verdana, Geneva, sans-serif;
     padding-right: 36px;
-    padding-left: 36px;
+    padding-left: 30px;
 }
 
 .bg-primary {
@@ -111,7 +86,7 @@ li:hover {
 .navbar-nav {
    float: left;
    margin: 0;
-   margin-left: 34%;
+   margin-left: 31%;
 }
 
 .navbar-nav.navbar-right:last-child {
