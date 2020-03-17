@@ -159,10 +159,6 @@ li:hover {
   box-sizing: border-box;
 }
 
-container {
-  margin: 50px 100px;
-}
-
 #menu {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
