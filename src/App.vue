@@ -9,16 +9,24 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+          <router-link to="/">
+            <a class="nav-link">Home<span class="sr-only">(current)</span></a>
+          </router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/shop.html">Shop</a>
+          <router-link to="/shop">
+            <a class="nav-link">Shop</a>
+          </router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/cart.html">Cart</a>
+          <router-link to="/cart">
+            <a class="nav-link">Cart</a>
+          </router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/about.html">About</a>
+          <router-link to="/about">
+            <a class="nav-link">About</a>
+          </router-link>
         </li>
       </ul>
     </div>
@@ -31,8 +39,13 @@
   </div>
   <!-- END LOGO CONTAINER -->
 
+  <!-- FOOTER-->
+  <div class="footer">
+      <span>Drew Bonnett, Christian Lewis 2020. Please visit <a href="https://github.com/andrewbonnett/creative_3">Github</a> for the files associated with this site.</span>
+  </div>
+  <!-- END FOOTER-->
 
-
+<!-- JUNK
   <div id="menu">
     <div id="brand">
       <router-link to="/">
@@ -55,9 +68,10 @@
     </div>
   </div>
   <router-view />
-
+-->
 
 </div>
+
 </template>
 
 <script>
@@ -71,6 +85,76 @@ export default {
 </script>
 
 <style>
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link, .navbar-light .navbar-nav .nav-link.hover {
+    color: rgb(0, 0, 0);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-family: Verdana, Geneva, sans-serif;
+    padding-right: 36px;
+    padding-left: 36px;
+}
+
+.bg-primary {
+    background-color: rgb(255, 255, 255)!important;
+    backdrop-filter: blur(0.8);
+    border-bottom: solid .5px #E6E6E6
+}
+
+li:hover {
+    background-color: rgb(184, 184, 184);
+}
+
+.navbar-nav {
+   float: left;
+   margin: 0;
+   margin-left: 34%;
+}
+
+.navbar-nav.navbar-right:last-child {
+   margin-right: -15px;
+   margin-left: 0;
+}
+
+.logo-container {
+    padding-top: 10px;
+    padding-bottom: 10px!important;
+    background-color: white;
+    width:100%;
+    border-bottom: solid .5px #E6E6E6
+}
+
+#logo img{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.foreground {
+    backdrop-filter: blur(4 px);
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: white;
+    border-top: solid .5px #E6E6E6
+  }
+
+<!----------------------------->
+
 * {
   box-sizing: border-box;
 }
