@@ -14,7 +14,7 @@
       <div class='col'>
         <div class="price">
           <h4>{{item.price}}</h4>
-          <button class="auto" @click="removeFromCart(item.id)">Remove Item</button>
+          <button class="btn btn-outline-secondary" @click="removeFromCart(item.id)">Remove Item</button>
         </div>
       </div>
     </div>
@@ -36,13 +36,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 .product img {
-  border: 2px solid #333;
-  height: 250px;
   width: 200px;
-  object-fit: cover;
 }
 
 </style>
