@@ -7,25 +7,25 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
+      <ul class="navbar-nav" style="list-style: none;">
+        <li class="nav-item" style="display: inline; float: none">
           <router-link to="/">
-            <a class="nav-link">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" style="display: inline-block;">Home<span class="sr-only">(current)</span></a>
           </router-link>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" style="display: inline; float: none">
           <router-link to="/shop">
-            <a class="nav-link">Shop</a>
+            <a class="nav-link" style="display: inline-block;">Shop</a>
           </router-link>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" style="display: inline; float: none;">
           <router-link to="/cart">
-            <a class="nav-link">Cart ({{numCartItems}})</a>
+            <a class="nav-link" style="display: inline-block;">Cart ({{numCartItems}})</a>
           </router-link>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" style="display: inline; float: none;">
           <router-link to="/about">
-            <a class="nav-link">About</a>
+            <a class="nav-link" style="display: inline-block;">About</a>
           </router-link>
         </li>
       </ul>
@@ -86,7 +86,7 @@ li:hover {
 .navbar-nav {
    float: left;
    margin: 0;
-   margin-left: 31%;
+   margin-left: 28%;
 }
 
 .navbar-nav.navbar-right:last-child {
