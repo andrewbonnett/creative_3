@@ -55,7 +55,10 @@
 export default {
   computed: {
     numCartItems() {
-      return this.$root.$data.cart.length;
+      let total = 0;
+      for (let i = 0; i < this.$root.$data.quantity.length; i++)
+        total += this.$root.$data.quantity[i];
+      return total;
     },
   }
 }

@@ -7,7 +7,7 @@
       </div>
       <div class="info">
         <h1>{{product.name}}</h1>
-        <h2 class="price">{{product.price}}</h2>
+        <h2 class="price">${{product.price.toFixed(2)}}</h2>
         <button class="btn btn-outline-secondary btn-sm" @click="addToCart(product)">Add to Cart</button>
       </div>
     </div>
@@ -24,7 +24,14 @@ export default {
   methods: {
     addToCart(product) {
       if (this.$root.$data.cart.includes(product)) {
-        this.$root.$data.cart.findIndex(product);
+        let index = this.$root.$data.cart.indexOf(product);
+        this.$root.$data.quantity[index] = this.$root.$data.quantity[index] + 1;
+        this.$root.$data.quantity.push(0);
+        this.$root.$data.quantity.pop();
+      }
+      else {
+        this.$root.$data.cart.push(product);
+        this.$root.$data.quantity.push(1);
       }
     },
   },
