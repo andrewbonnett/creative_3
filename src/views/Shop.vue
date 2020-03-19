@@ -1,24 +1,26 @@
 <template>
 <div>
-  <div class="wrapper">
+  <br/>
+  <div class="wrapper1">
     <div class="search">
       <form class="pure-form">
-        <i class="fas fa-search"></i><input v-model="searchText" />
+        <i style="display: table-cell;padding-left: 10px;width: 1px;" class="fas fa-search"></i><input v-model="searchText" />
       </form>
     </div>
   </div>
+  <br/>
   <div class="sidebar-helper">
     <div class="sidebar">
       <h2>Men's</h2>
       More filters coming soon to Moonstone.
       <hr/>
       <span class="bucket-heading">Category</span>
-      <ul>
-          <li class="li-sidebar">New Arrivals</li>
-          <li class="li-sidebar">Popular</li>
-          <li class="li-sidebar">Shirts</li>
-          <li class="li-sidebar">Swimwear</li>
-          <li class="li-sidebar">Accessories</li>
+      <ul style="list-style-type: none;padding-left: 0px;">
+          <li class="li-sidebar"><a @click="setFilter('New Arrivals')" href="#">New Arrivals</a></li>
+          <li class="li-sidebar"><a @click="setFilter('Popular')" href="#">Popular</a></li>
+          <li class="li-sidebar"><a @click="setFilter('Shirts')" href="#">Shirts</a></li>
+          <li class="li-sidebar"><a @click="setFilter('Swimwear')" href="#">Swimwear</a></li>
+          <li class="li-sidebar"><a @click="setFilter('Jackets')" href="#">Jackets</a></li>
       </ul>
     </div>
     <div class="main">
@@ -38,13 +40,25 @@ export default {
   data() {
   return {
     searchText: '',
+    filter: '',
   }
   },
   computed: {
-  products() {
-      return this.$root.$data.products.filter(product => product.name.toLowerCase().search(this.searchText) >= 0);
-  }
+    products() {
+        return this.$root.$data.products.filter(product => (product.name.toLowerCase().search(this.searchText)) >= 0 && product.category.includes(this.filter));
+    }
   },
+  methods: {
+    setFilter(key) {
+      if (this.filter === key) {
+        console.log('Inside the function, ' + key + this.filter);
+        this.filter = '';
+      }
+      else {
+        this.filter = key;
+      }
+    }
+  }
 }
 </script>
 
@@ -92,10 +106,15 @@ export default {
     margin-top: 10px;
 }
 
-<!---------------------->
-.wrapper {
+.wrapper1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  /* -webkit-box-pack: center; */
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -114,6 +133,19 @@ i {
   display: table-cell;
   padding-left: 10px;
   width: 1px;
+}
+
+li a:link {
+  text-decoration: none;
+}
+
+li a:visited {
+  text-decoration: none;
+}
+
+li a{
+  text-decoration: none;
+  color: black;
 }
 
 input {

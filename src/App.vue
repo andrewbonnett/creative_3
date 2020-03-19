@@ -79,10 +79,6 @@ export default {
     border-bottom: solid .5px #E6E6E6
 }
 
-li:hover {
-    background-color: rgb(184, 184, 184);
-}
-
 .navbar-nav {
    float: left;
    margin: 0;
