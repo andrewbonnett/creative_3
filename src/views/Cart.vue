@@ -7,7 +7,7 @@
 
       <hr>
         <div class="row">
-          <div class="cart-text col-sm">Item(s)</div>
+          <div class="cart-text col-sm">Item<a v-if="this.$root.$data.cart.length > 1">s</a></div>
           <div class="cart-text col-sm-6">
           </div>
           <div class="cart-text-2 col-sm">
@@ -58,8 +58,34 @@ export default {
 
 <style scoped>
 
-.product img {
-  width: 200px;
+img {
+  width: 100%;
+}
+
+.cart-heading {
+  text-align: left;
+  font-size: 30px;
+  color: black;
+  font-family:"Arial Black", Gadget, sans-serif;
+}
+
+.cart-page-container {
+  margin: auto;
+  padding-top: 35px;
+  padding-bottom: 85px;
+  background-color: white;
+  width:65%;
+}
+
+.cart-text {
+  margin: auto;
+  font-size: 24px;
+}
+
+.cart-text-2 {
+  font-size: 24px;
+  text-align: right;
+  margin: auto;
 }
 
 </style>

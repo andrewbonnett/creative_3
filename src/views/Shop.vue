@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="shop-container">
   <br/>
   <div class="wrapper1">
     <div class="search">
@@ -67,6 +67,12 @@ export default {
 .sidebar-helper {
     display: flex;
     justify-content: space-between;
+}
+
+.shop-container {
+  padding-left: 50px;
+  padding-right: 50px;
+
 }
 
 .main {

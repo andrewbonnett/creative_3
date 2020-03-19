@@ -38,9 +38,11 @@
     <img src="images/logo.jpeg" width="300" style="text-align: center;">
   </div>
   <!-- END LOGO CONTAINER -->
+
   <router-view />
+
   <!-- FOOTER-->
-  <div class="footer">
+  <div class="footer container2">
       <span>Drew Bonnett, Christian Lewis 2020. Please visit <a href="https://github.com/andrewbonnett/creative_3">Github</a> for the files associated with this site.</span>
   </div>
   <!-- END FOOTER-->
@@ -60,6 +62,11 @@ export default {
 </script>
 
 <style>
+
+.container2 {
+    width: auto;
+    padding: 0 15px;
+}
 
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link, .navbar-light .navbar-nav .nav-link.hover {
     color: rgb(0, 0, 0);
@@ -82,7 +89,7 @@ export default {
 .navbar-nav {
    float: left;
    margin: 0;
-   margin-left: 28%;
+   margin-left: 34%;
 }
 
 .navbar-nav.navbar-right:last-child {
@@ -124,54 +131,4 @@ export default {
     border-top: solid .5px #E6E6E6
   }
 
-<!----------------------------->
-
-* {
-  box-sizing: border-box;
-}
-
-#menu {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 5px;
-  grid-template-areas: "none brand side";
-  margin-bottom: 50px;
-}
-
-#menu a {
-  color: #B84901;
-}
-
-#brand {
-  grid-area: brand;
-  display: flex;
-  justify-content: center;
-}
-
-#brand img {
-  height: 200px;
-}
-
-#side {
-  grid-area: side;
-  display: flex;
-  justify-content: flex-end;
-}
-
-#side img {
-  width: 50px;
-}
-
-.menu-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.menu-item p {
-  margin: 0px;
-}
-
-.browse {
-  margin-right: 50px;
-}
 </style>

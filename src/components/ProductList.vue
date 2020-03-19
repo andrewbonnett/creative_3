@@ -23,8 +23,10 @@ export default {
   },
   methods: {
     addToCart(product) {
-      this.$root.$data.cart.push(product);
-    }
+      if (this.$root.$data.cart.includes(product)) {
+        this.$root.$data.cart.findIndex(product);
+      }
+    },
   },
 }
 </script>
