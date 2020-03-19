@@ -1,24 +1,44 @@
 <template>
-<div class="wrapper">
-  <p style="text-align: center;" v-show="this.$root.$data.cart.length === 0">No items in cart.</p>
-    <div class="row product" v-for="item in this.$root.$data.cart" :key="item.id">
-      <div class="col">
-        <div class="image">
-        <img :src="'/images/products/'+item.image">
+
+<div class="cart-page-container">
+  <p v-if="this.$root.$data.cart.length === 0" style="text-align: center;">No items in cart.</p>
+    <div v-else>
+      <div class="cart-heading">Your Cart</div>
+
+      <hr>
+        <div class="row">
+          <div class="cart-text col-sm">Item(s)</div>
+          <div class="cart-text col-sm-6">
+          </div>
+          <div class="cart-text-2 col-sm">
+            Price
+          </div>
+          <div class="cart-text-2 col-sm">Qty</div>
         </div>
-      </div>
-      <div class="col">
-        <h3>{{item.name}}</h3>
-        <p>{{item.country}}</p>
-      </div>
-      <div class='col'>
-        <div class="price">
-          <h4>{{item.price}}</h4>
-          <button class="btn btn-outline-secondary" @click="removeFromCart(item.id)">Remove Item</button>
+      <hr>
+
+      <div v-for="item in this.$root.$data.cart" :key="item.id">
+        <div class="row">
+          <div class="col-sm">
+            <img :src="'/images/products/'+item.image" width="100%">
+          </div>
+          <div class="cart-text col-sm-6">
+            {{item.name}}
+          </div>
+          <div class="cart-text-2 col-sm">
+            {{item.price}}
+          </div>
+          <div class="cart-text-2 col-sm">
+            1  <!--FIX QUANTITY -->
+            <button class="btn btn-outline-secondary" @click="removeFromCart(item.id)">Remove Item</button>
+          </div>
         </div>
+        <hr>
       </div>
-    </div>
+
+  </div>
 </div>
+
 </template>
 
 <script>

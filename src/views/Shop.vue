@@ -21,6 +21,7 @@
           <li class="li-sidebar"><a @click="setFilter('Shirts')" href="#">Shirts</a></li>
           <li class="li-sidebar"><a @click="setFilter('Swimwear')" href="#">Swimwear</a></li>
           <li class="li-sidebar"><a @click="setFilter('Jackets')" href="#">Jackets</a></li>
+          <li class="li-sidebar line"><a @click="setFilter('')" href="#">See All</a></li>
       </ul>
     </div>
     <div class="main">
@@ -90,6 +91,11 @@ export default {
 
 #shop body {
     height: 100%;
+}
+.line {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    width: 180px;
 }
 
 .bucket-heading{
