@@ -1,24 +1,5 @@
-# moonstone-store
+# creative_3
 
-## Project setup
-```
-npm install
-```
+Collaborated with a friend to upgrade our original clothing brand website (see [creative_1 repository](https://github.com/andrewbonnett/creative_1)).
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Running on DigitalOcean server: [creative3.andrewbonnett.me](https://creative3.andrewbonnett.me)
