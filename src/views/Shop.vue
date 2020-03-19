@@ -52,7 +52,6 @@ export default {
   methods: {
     setFilter(key) {
       if (this.filter === key) {
-        console.log('Inside the function, ' + key + this.filter);
         this.filter = '';
       }
       else {
